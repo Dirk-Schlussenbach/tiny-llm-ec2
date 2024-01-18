@@ -9,7 +9,8 @@ from transformers import pipeline
 def model_query(query: str):
     pipe = pipeline(
         "text-generation",
-        model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        # model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        model="GermanT5/t5-efficient-gc4-all-german-small-el32",
         torch_dtype=torch.bfloat16,
         device_map="auto",
     )
